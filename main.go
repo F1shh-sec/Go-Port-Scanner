@@ -21,19 +21,19 @@ func main() {
 	if argsnum < 2 {
 		// if there are no arguments provided
 		noArgs()
-	} else if argsnum == 5 {
+	} else if argsnum >= 2 {
 		// USAGE go run main.go protocol target_ip Starting_port Ending_port
-		withArgs()
+		withArgs(argsnum)
 	}
 
 }
-func withArgs() {
+func withArgs(argsnum int) {
 	// if there are
 	prot := os.Args[1]
 	ipa := os.Args[2]
 	startport, _ := strconv.Atoi(os.Args[3])
 	endport, _ := strconv.Atoi(os.Args[4])
-
+	
 	runScan(prot, ipa, startport, endport)
 
 }
