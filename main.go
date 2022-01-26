@@ -21,9 +21,15 @@ func main() {
 	if argsnum < 2 {
 		// if there are no arguments provided
 		noArgs()
+		//waits for user input so the window won't instantly close
+		fmt.Println("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+		fmt.Println("Scanning complete. Press enter to exit...")
+		fmt.Scanln()
 	} else if argsnum >= 2 {
 		// USAGE go run main.go target_ip Starting_port Ending_port protocol
 		withArgs(argsnum)
+		fmt.Println("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+		fmt.Println("Scan Complete")
 	}
 
 }
