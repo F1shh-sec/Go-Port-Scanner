@@ -83,7 +83,6 @@ func noArgs() {
 
 func runScan(prot string, ipa string, startport int, endport int) {
 	var wg sync.WaitGroup
-
 	if endport > startport {
 		for i := startport; i <= endport; i++ {
 			wg.Add(1)
